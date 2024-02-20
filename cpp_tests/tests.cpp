@@ -1,17 +1,23 @@
 #include <iostream>
 
-double convertTemp(double celsius)
-{
-	return 1.8 * celsius + 32;
-}
-
 int main()
 {
 
-	double celsius{ 0 };
-	std::cout << "Please enter a degree value in celsius :\n";
-	std::cin >> celsius;
-	std::cout << celsius << "Celsius is " << convertTemp(celsius) << "Fahrenheit";
+	double lenght{ 0 };
+	double width{ 0 };
+	double height{ 0 };
+
+
+	std::cout << "Welcome to box calculator. Please type in lenght, width and height information :\n";
+	std::cout << "length: ";
+	std::cin >> lenght;
+	std::cout << "\nwidth: ";
+	std::cin >> width;
+	std::cout << "\nheight: ";
+	std::cin >> height;
+	std::cout << "\nThe base area is : " << lenght * width;
+	std::cout << "\nThe volume is: " << lenght * width * height;
+
 
 	return 0;
 }
