@@ -1,3 +1,2 @@
 ﻿  tests.cpp
-C:\Users\Lucas\Documents\Code\cpp_tests\cpp_tests\tests.cpp(41,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   cpp_tests.vcxproj -> C:\Users\Lucas\Documents\Code\cpp_tests\x64\Debug\cpp_tests.exe

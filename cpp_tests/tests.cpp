@@ -1,48 +1,30 @@
 #include <iostream>
-#include <vector>
+
+template<typename T>
+
+void swap(T& a, T& b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
 
 int main()
 {
 
-	std::vector<int> types_arr{ 0,0,0,0,0 };
-	std::vector<int> arr{ 1, 4, 4, 4, 5, 3 };
-
-	for (size_t i = 0; i < arr.size(); ++i)
-	{
-		switch (arr[i])
-		{
-		case 1:
-			types_arr[0] += 1;
-			break;
-		case 2:
-			types_arr[1] += 1;
-			break;
-		case 3:
-			types_arr[2] += 1;
-			break;
-		case 4:
-			types_arr[3] += 1;
-			break;
-		case 5:
-			types_arr[4] += 1;
-			break;
-		}
-	}
-
-	int higher_i{ 0 };
-	int higher_num = types_arr[higher_i];
+	int a{ 4 };
+	int b{ 2 };
+	char c{'c'};
+	char d{'d'};
 
 
-	for (size_t i = 1; i < types_arr.size(); ++i)
-	{
-		if (types_arr[i] > higher_num)
-		{
-			higher_num = types_arr[i];
-			higher_i = i;
-		}
-	}
-
-	std::cout << higher_i + 1;
+	std::cout << a << "-" << b << "\n";
+	swap(a, b);
+	std::cout << a << "-" << b << "\n";
+	std::cout << c << "-" << d << "\n";
+	swap(c, d);
+	std::cout << c << "-" << d;
 
 	return 0;
 }
