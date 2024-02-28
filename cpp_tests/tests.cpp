@@ -1,30 +1,32 @@
 #include <iostream>
+#include <vector>
 
-template<typename T>
+using namespace std;
 
-void swap(T& a, T& b)
+void bonAppetit(vector<int> bill, int k, int b) 
 {
-	int temp = a;
-	a = b;
-	b = temp;
-}
+    int ana_share = bill[k];
+    int bill_sum{ 0 };
 
+    for (size_t i = 0; i < bill.size(); ++i)
+    {
+        bill_sum += bill[i];
+    }
+
+    if (b == bill_sum)
+    {
+        cout << "Bon Appetit";
+    }
+    else
+    {
+        cout << b - ana_share;
+    }
+}
 
 int main()
 {
 
-	int a{ 4 };
-	int b{ 2 };
-	char c{'c'};
-	char d{'d'};
-
-
-	std::cout << a << "-" << b << "\n";
-	swap(a, b);
-	std::cout << a << "-" << b << "\n";
-	std::cout << c << "-" << d << "\n";
-	swap(c, d);
-	std::cout << c << "-" << d;
+	
 
 	return 0;
 }
